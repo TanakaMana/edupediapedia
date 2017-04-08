@@ -7,14 +7,26 @@
   padding: 3px 12px;
 }
 
+.btn-head {
+  border:3px solid;
+  border-color: #fff;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
+  a {
+    color: #fff;
+  }
+}
+
 //トップページのプロジェクトラベル
 .admin-label {
   padding: 3px 3px 3px 10px;
   background-color: #939CA5;
   border-radius: 2px;
-}
-
-//ヘッダーの固定によりページのタイトルが隠れてしまうのを回避
-.page-header {
-  padding-top: 70px;
 }
