@@ -31,11 +31,20 @@
   border-radius: 2px;
 }
 
-//headerボタンのhoverの色を#18bc9cから#ED897Fに変更
+//ヘッダーボタンのhoverの色を#18bc9cから#ED897Fに変更
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #ED897F;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   border-color: #ED897F;
+}
+
+//ヘッダーの端にmarginを追加
+.navbar-btn {
+  margin-right: 55px;
+}
+
+.navbar-brand {
+  padding: 22px 40px;
 }
