@@ -11,8 +11,8 @@
   -if user_signed_in?
     %ul.nav.navbar-nav.navbar-right
       %li.dropdown
-        %a.dropdown-toggle{ "aria-expanded" => "false", "data-toggle" => "dropdown", href: "#", role: "button" }
-          = current_user.name
+        %a.dropdown-toggle.btn.btn-head.navbar-btn{ "aria-expanded" => "false", "data-toggle" => "dropdown", href: "#", role: "button" }
+          = "田中真奈のメニュー"
           %span.caret
         %ul.dropdown-menu{ role: "menu" }
           %li
@@ -21,9 +21,6 @@
             = link_to 'ページを編集', edit_user_registration_path(current_user)
           %li
             = link_to 'サインアウト', destroy_user_session_path, method: :delete
-      %li
-        .btn.btn-head.navbar-btn
-          = link_to 'New Proto', ''
       //not login
   -else
     %ul.nav.navbar-nav.navbar-right
