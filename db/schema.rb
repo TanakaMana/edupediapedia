@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170407231355) do
     t.string   "university"
     t.string   "faculty"
     t.string   "department"
-    t.integer  "admission_year"
+    t.integer  "year"
     t.integer  "location"
     t.text     "education_interest",     limit: 65535
     t.text     "doing",                  limit: 65535

@@ -51,8 +51,9 @@
 
 //各ページトップのh1に下線を追加
 .line {
-border-bottom: ridge;
-margin-bottom: 50px;
+  border-bottom: double;
+  margin-bottom: 50px;
+  padding: 5px;
 }
 
 //テーブルに境界線を追加

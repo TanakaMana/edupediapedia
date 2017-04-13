@@ -15,7 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string  :university
       t.string  :faculty
       t.string  :department
-      t.integer :admission_year
+      t.integer :year
       t.integer :location
       t.text    :education_interest
       t.text    :doing
