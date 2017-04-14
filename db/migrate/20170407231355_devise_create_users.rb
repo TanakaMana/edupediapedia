@@ -11,27 +11,37 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      # Member infomation
+      ## Member infomation
+      # 基本情報
       t.string  :university
       t.string  :faculty
       t.string  :department
       t.integer :year
+
+      # EDUPEDIAの活動
       t.integer :location
-      t.text    :education_interest
-      t.text    :doing
-      t.text    :future_doing
       t.integer :team
       t.integer :position
+      t.text    :doing
+      t.text    :future_doing
       t.string  :start_time
-      t.integer :roje
-      t.text    :outside
+      t.text    :trigger
+
+      # 人柄
+      t.text    :education_interest
       t.text    :future_work
       t.text    :specially
-      t.text    :extend
+      t.text    :improve
+      t.string  :hobby
       t.text    :like
       t.string  :motto
-      t.text    :memo
 
+      # EDUPEDIA外の活動
+      t.integer :roje
+      t.text    :outside
+
+      # メモ
+      t.text    :memo
       ## Rememberable
       t.datetime :remember_created_at
 

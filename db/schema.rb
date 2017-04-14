@@ -23,19 +23,21 @@ ActiveRecord::Schema.define(version: 20170407231355) do
     t.string   "department"
     t.integer  "year"
     t.integer  "location"
-    t.text     "education_interest",     limit: 65535
-    t.text     "doing",                  limit: 65535
-    t.text     "future_doing",           limit: 65535
     t.integer  "team"
     t.integer  "position"
+    t.text     "doing",                  limit: 65535
+    t.text     "future_doing",           limit: 65535
     t.string   "start_time"
-    t.integer  "roje"
-    t.text     "outside",                limit: 65535
+    t.text     "trigger",                limit: 65535
+    t.text     "education_interest",     limit: 65535
     t.text     "future_work",            limit: 65535
     t.text     "specially",              limit: 65535
-    t.text     "extend",                 limit: 65535
+    t.text     "improve",                limit: 65535
+    t.string   "hobby"
     t.text     "like",                   limit: 65535
     t.string   "motto"
+    t.integer  "roje"
+    t.text     "outside",                limit: 65535
     t.text     "memo",                   limit: 65535
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                        default: 0,  null: false
