@@ -7,6 +7,17 @@
       %br/
       = f.text_field :name, autofocus: true
     .field
+      %br/
+      = f.label :name, '所属拠点（関東・関西・九州）'
+      %br/
+      %p.radio{for: 'kanto'} 関東
+      = f.radio_button :location, 'kanto', checked: 'checked', class: 'field', id: 'kanto'
+      %p.radio{for: 'kansai'} 関西
+      = f.radio_button :location, 'kansai', class: 'field', id: 'kansai'
+      %p.radio{for: 'kyushu'} 九州
+      = f.radio_button :location, 'kyushu', class: 'field', id: 'kyuhsu'
+    .field
+      %br/
       = f.label :email
       %br/
       = f.email_field :email
