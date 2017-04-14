@@ -101,3 +101,13 @@
             %tr
               %td.column ROJE外の活動
               %td= @user.outside
+    .col-lg-6
+      .bs-component
+        .panel.panel-active
+          .panel-heading
+            %h3.panel-title メモ
+        %table.table.table-striped.table-hover
+          %tbody
+            %tr.actice
+              %td.column メモ
+              %td= @user.memo
