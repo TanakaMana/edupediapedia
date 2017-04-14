@@ -4,77 +4,110 @@
       .bs-docs-section
         .row
           .col-lg-6
-            %h2.line 田中真奈のページ
+            %h2.line= @user.name
 .container
   .row
-    .col-lg-6.blank
+    .col-lg-6
       .bs-component
         .panel.panel-info
           .panel-heading
             %h3.panel-title 基本情報
         %table.table.table-striped.table-hover
           %tbody
-            %tr
-              %td.column 名前
-              %td 田中真奈
             %tr.info
-              %td.column メールアドレス
-              %td test@gmail.com
-            %tr
-              %td.column 大学
-              %td 大阪大学
-            %tr.info
-              %td.column 学部
-              %td 経済学部
-        .panel.panel-warning
-          .panel-heading EDUPEDIA内の活動
-        %table.table.table-striped.table-hover
-          %tbody
-            %tr
               %td.column 名前
-              %td 田中真奈
-            %tr.warning
-              %td.column メールアドレス
-              %td test@gmail.com
+              %td= @user.name
             %tr
+              %td.column メールアドレス
+              %td= @user.email
+            %tr.info
               %td.column 大学
-              %td 大阪大学
-            %tr.warning
+              %td= @user.university
+            %tr
               %td.column 学部
-              %td 経済学部
+              %td= @user.faculty
+            %tr.info
+              %td.column 学科
+              %td= @user.department
+            %tr
+              %td.column 学年
+              %td= @user.year
     .col-lg-6
       .bs-component
         .panel.panel-danger
           .panel-heading
-            %h3.panel-title パーソナリティ
+            %h3.panel-title 人柄
         %table.table.table-striped.table-hover
           %tbody
-            %tr
-              %td.column 名前
-              %td 田中真奈
             %tr.danger
-              %td.column メールアドレス
-              %td test@gmail.com
+              %td.column 興味のある教育分野
+              %td= @user.education_interest
             %tr
-              %td.column 大学
-              %td 大阪大学
+              %td.column 将来就きたい仕事
+              %td= @user.future_work
             %tr.danger
-              %td.column 学部
-              %td 経済学部
+              %td.column 得意なこと
+              %td= @user.specially
+            %tr
+              %td.column 今後伸ばしたい力
+              %td= @user.improve
+            %tr.danger
+              %td.column 趣味
+              %td= @user.hobby
+            %tr
+              %td.column 好きなこと
+              %td= @user.like
+            %tr.danger
+              %td.column 座右の銘
+              %td= @user.motto
+    .col-lg-6
+      .bs-component
+        .panel.panel-warning
+          .panel-heading
+            %h3.panel-title EDUPEDIAの活動
+        %table.table.table-striped.table-hover
+          %tbody
+            %tr.warning
+              %td.column 活動拠点
+              %td= @user.location
+            %tr
+              %td.column 専門班
+              %td= @user.team
+            %tr.warning
+              %td.column 役職
+              %td= @user.position
+            %tr
+              %td.column 現在やっていること
+              %td= @user.doing
+            %tr.warning
+              %td.column 今後やりたいこと
+              %td= @user.future_doing
+            %tr
+              %td.column EDUPEDIA開始時期
+              %td= @user.start_time
+            %tr.warning
+              %td.column EDUPEDIAに入ったきっかけ
+              %td= @user.trigger
+    .col-lg-6
+      .bs-component
         .panel.panel-success
           .panel-heading
             %h3.panel-title EDUPEDIA外の活動
         %table.table.table-striped.table-hover
           %tbody
-            %tr
-              %td.column 名前
-              %td 田中真奈
             %tr.success
-              %td.column メールアドレス
-              %td test@gmail.com
+              %td.column その他のROJE所属プロジェクト・課
+              %td= @user.roje
             %tr
-              %td.column 大学
-              %td 大阪大学
-            %tr.success
-              %td.column 学部
-              %td 経済学部
+              %td.column ROJE外の活動
+              %td= @user.outside
+    .col-lg-6
+      .bs-component
+        .panel.panel-active
+          .panel-heading
+            %h3.panel-title メモ
+        %table.table.table-striped.table-hover
+          %tbody
+            %tr.actice
+              %td.column メモ
+              %td= @user.memo

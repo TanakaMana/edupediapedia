@@ -3,9 +3,13 @@
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = devise_error_messages!
     .field
+      = f.label :name, '名前（例：山田 太郎）'
+      %br/
+      = f.text_field :name, autofocus: true
+    .field
       = f.label :email
       %br/
-      = f.email_field :email, autofocus: true
+      = f.email_field :email
     .field
       = f.label :password
       - if @minimum_password_length
@@ -17,6 +21,8 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation, autocomplete: "off"
+    .field
+      %br/
     .actions
       = f.submit '登録'
   = render "devise/shared/links"
