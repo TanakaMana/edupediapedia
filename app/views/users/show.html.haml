@@ -5,6 +5,8 @@
         .row
           .col-lg-6
             %h2.line= @user.name
+          .col-lg-6
+            = link_to 'ページを編集', edit_user_path(@user.id), class: 'btn btn-primary edit'
 .container
   .row
     .col-lg-6
