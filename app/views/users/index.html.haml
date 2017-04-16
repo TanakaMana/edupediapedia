@@ -32,3 +32,48 @@
         %td= kanto_user.doing
         %td
           = link_to '個人ページへ', user_path(kanto_user.id), class: 'btn small btn-primary'
+  %h4.admin-label 関西
+  %table.table.table-striped.table-hover
+    %thead
+      %tr
+        %th 学年
+        %th 名前
+        %th 大学名
+        %th 活動拠点
+        %th 今やっていること
+        %th 詳細
+    %tbody
+    - @kansai_users.each do |kansai_user|
+      -# %tr{ class: cycle('info', '') }
+      -#   - kanto_user
+      %tr.info
+        %td= kansai_user.year
+        %td= kansai_user.name
+        %td= kansai_user.university
+        %td= Settings.location_name.kansai
+        %td= kansai_user.doing
+        %td
+          = link_to '個人ページへ', user_path(kansai_user.id), class: 'btn small btn-primary'
+  %h4.admin-label 九州
+  %table.table.table-striped.table-hover
+    %thead
+      %tr
+        %th 学年
+        %th 名前
+        %th 大学名
+        %th 活動拠点
+        %th 今やっていること
+        %th 詳細
+    %tbody
+    - @kyushu_users.each do |kyushu_user|
+      -# %tr{ class: cycle('info', '') }
+      -#   - kanto_user
+      %tr.info
+        %td= kyushu_user.year
+        %td= kyushu_user.name
+        %td= kyushu_user.university
+        %td= Settings.location_name.kyushu
+        %td= kyushu_user.doing
+        %td
+          = link_to '個人ページへ', user_path(kyushu_user.id), class: 'btn small btn-primary'
+
