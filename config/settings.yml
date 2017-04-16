@@ -1,4 +1,4 @@
 location_name:
-  - 関東
-  - 関西
-  - 九州
+  kanto: 関東
+  kansai: 関西
+  kyushu: 九州
