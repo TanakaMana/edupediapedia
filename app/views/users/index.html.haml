@@ -10,89 +10,70 @@
               %a.btn.wide.btn-danger{:href => "#"} 関東
               %a.btn.wide.btn-warning{:href => "#"} 関西
               %a.btn.wide.btn-success{:href => "#"} 九州
-  %h4.admin-label QM
+  %h4.admin-label 関東
   %table.table.table-striped.table-hover
     %thead
       %tr
-        %th # 学年
-        %th # 名前
-        %th # 大学名
-        %th # 活動拠点
-        %th # 活動メモ
-        %th # 詳細
+        %th 学年
+        %th 名前
+        %th 大学名
+        %th 活動拠点
+        %th 今やっていること
+        %th 詳細
     %tbody
-      %tr
-        %td 1
-        %td 山田 太郎
-        %td 早稲田大学
-        %td 早稲田
-        %td どんどんQMやりたいです！
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
+    - @kanto_users.each do |kanto_user|
+      -# %tr{ class: cycle('info', '') }
+      -#   - kanto_user
       %tr.info
-        %td 2
-        %td 田中 花子
-        %td 東京大学
-        %td 御茶ノ水
-        %td 8月は留学で動けません。
+        %td= kanto_user.year
+        %td= kanto_user.name
+        %td= kanto_user.university
+        %td= Settings.location_name.kanto
+        %td= kanto_user.doing
         %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-      %tr
-        %td 3
-        %td 本田 総一朗
-        %td 関西大学
-        %td 関西
-        %td
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-      %tr.info
-        %td 4
-        %td 木村 沙織
-        %td 同志社大学
-        %td 関西
-        %td 関西でQM勉強会したい。
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-  %h4.admin-label BC
+          = link_to '個人ページへ', user_path(kanto_user.id), class: 'btn small btn-primary'
+  %h4.admin-label 関西
   %table.table.table-striped.table-hover
     %thead
       %tr
-        %th # 学年
-        %th # 名前
-        %th # 大学名
-        %th # 活動拠点
-        %th # 活動メモ
-        %th # 詳細
+        %th 学年
+        %th 名前
+        %th 大学名
+        %th 活動拠点
+        %th 今やっていること
+        %th 詳細
     %tbody
-      %tr
-        %td 1
-        %td 山田 太郎
-        %td 早稲田大学
-        %td 早稲田
-        %td どんどんQMやりたいです！
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
+    - @kansai_users.each do |kansai_user|
+      -# %tr{ class: cycle('info', '') }
+      -#   - kanto_user
       %tr.info
-        %td 2
-        %td 田中 花子
-        %td 東京大学
-        %td 御茶ノ水
-        %td 8月は留学で動けません。
+        %td= kansai_user.year
+        %td= kansai_user.name
+        %td= kansai_user.university
+        %td= Settings.location_name.kansai
+        %td= kansai_user.doing
         %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
+          = link_to '個人ページへ', user_path(kansai_user.id), class: 'btn small btn-primary'
+  %h4.admin-label 九州
+  %table.table.table-striped.table-hover
+    %thead
       %tr
-        %td 3
-        %td 本田 総一朗
-        %td 関西大学
-        %td 関西
-        %td
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
+        %th 学年
+        %th 名前
+        %th 大学名
+        %th 活動拠点
+        %th 今やっていること
+        %th 詳細
+    %tbody
+    - @kyushu_users.each do |kyushu_user|
+      -# %tr{ class: cycle('info', '') }
+      -#   - kanto_user
       %tr.info
-        %td 4
-        %td 木村 沙織
-        %td 同志社大学
-        %td 関西
-        %td 関西でQM勉強会したい。
+        %td= kyushu_user.year
+        %td= kyushu_user.name
+        %td= kyushu_user.university
+        %td= Settings.location_name.kyushu
+        %td= kyushu_user.doing
         %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
+          = link_to '個人ページへ', user_path(kyushu_user.id), class: 'btn small btn-primary'
+
