@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:prototype).permit(
+    params.require(:user).permit(
       :name,
       :email,
       :encrypted_password,
