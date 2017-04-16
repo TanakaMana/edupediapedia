@@ -21,79 +21,14 @@
         %th 今やっていること
         %th 詳細
     %tbody
-      %tr
-        %td= @user.year
-        %td= @user.name
-        %td= @user.university
-        %td= @user.location
-        %td= @user.doing
-        %td
-          = link_to '個人ページへ', user_path(@user.id), class: 'btn small btn-primary'
+    - @kanto_users.each do |kanto_user|
+      -# %tr{ class: cycle('info', '') }
+      -#   - kanto_user
       %tr.info
-        %td= @user.year
-        %td= @user.name
-        %td= @user.university
-        %td= @user.location
-        %td= @user.doing
+        %td= kanto_user.year
+        %td= kanto_user.name
+        %td= kanto_user.university
+        %td= Settings.location_name.kanto
+        %td= kanto_user.doing
         %td
-          = link_to '個人ページへ', user_path(@user.id), class: 'btn small btn-primary'
-      %tr
-        %td 3
-        %td 本田 総一朗
-        %td 関西大学
-        %td 関西
-        %td
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-      %tr.info
-        %td 4
-        %td 木村 沙織
-        %td 同志社大学
-        %td 関西
-        %td 関西でQM勉強会したい。
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-  %h4.admin-label BC
-  %table.table.table-striped.table-hover
-    %thead
-      %tr
-        %th # 学年
-        %th # 名前
-        %th # 大学名
-        %th # 活動拠点
-        %th # 活動メモ
-        %th # 詳細
-    %tbody
-      %tr
-        %td 1
-        %td 山田 太郎
-        %td 早稲田大学
-        %td 早稲田
-        %td どんどんQMやりたいです！
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-      %tr.info
-        %td 2
-        %td 田中 花子
-        %td 東京大学
-        %td 御茶ノ水
-        %td 8月は留学で動けません。
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-      %tr
-        %td 3
-        %td 本田 総一朗
-        %td 関西大学
-        %td 関西
-        %td
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
-      %tr.info
-        %td 4
-        %td 木村 沙織
-        %td 同志社大学
-        %td 関西
-        %td 関西でQM勉強会したい。
-        %td
-          = link_to '個人ページへ', '', class: 'btn small btn-primary'
           = link_to '個人ページへ', user_path(kanto_user.id), class: 'btn small btn-primary'
