@@ -71,13 +71,13 @@
           %tbody
             %tr.warning
               %td.column 活動拠点
-              %td= @user.location
+              %td= Settings.location_name[@user.location]
             %tr
               %td.column 専門班
               %td= @user.team
             %tr.warning
               %td.column 役職
-              %td= @user.position
+              %td= Settings.position_name[@user.position]
             %tr
               %td.column 現在やっていること
               %td= @user.doing
