@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+
   before_action :authenticate_user!
-  before_action :set_user, only: [:show, :edit]
+  before_action :set_user, only: [:show, :edit, :update]
 
   def index
     @kanto_users = User.where(location: 0)
@@ -15,7 +16,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    User.find(params[:id]).update(user_params)
+    @user.update(user_params)
+    redirect_to user_path(@user.id)
   end
 
   private
