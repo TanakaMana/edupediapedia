@@ -2,3 +2,8 @@ location_name:
   kanto: 関東
   kansai: 関西
   kyushu: 九州
+
+position_name:
+  member: メンバー
+  leader: リーダー
+  pl: プロジェクトリーダー

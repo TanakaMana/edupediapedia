@@ -1,0 +1,119 @@
+.container
+  .row
+    .col-lg-12
+      .bs-docs-section
+        .row
+          .col-lg-6
+            %h2.line= @user.name + '（編集ページ）'
+          .col-lg-6
+            = link_to 'ページの編集', edit_user_path(@user.id), class: 'btn btn-primary edit'
+.container
+  = form_for @user do |f|
+    .row
+      .col-lg-6
+        .bs-component
+          .panel.panel-info
+            .panel-heading
+              %h3.panel-title 基本情報
+          %table.table.table-striped.table-hover
+            %tbody
+              %tr.info
+                %td.column 名前
+                %td= @user.name
+              %tr
+                %td.column メールアドレス
+                %td= @user.email
+              %tr.info
+                %td.column 大学
+                %td= f.text_field :university, placeholder: '例：EDU大学', class: 'full'
+              %tr
+                %td.column 学部
+                %td= f.text_field :faculty, placeholder: '例：教育学部', class: 'full'
+              %tr.info
+                %td.column 学科
+                %td= f.text_field :department, placeholder: '例：教育学科', class: 'full'
+              %tr
+                %td.column 学年
+                %td= f.text_field :year, placeholder: '例：1', class: 'full'
+      .col-lg-6
+        .bs-component
+          .panel.panel-danger
+            .panel-heading
+              %h3.panel-title 人柄
+          %table.table.table-striped.table-hover
+            %tbody
+              %tr.danger
+                %td.column 興味のある教育分野
+                %td= f.text_field :education_interest, class: 'full'
+              %tr
+                %td.column 将来就きたい仕事
+                %td= f.text_field :future_work, class: 'full'
+              %tr.danger
+                %td.column 得意なこと
+                %td= f.text_field :specially, class: 'full'
+              %tr
+                %td.column 今後伸ばしたい力
+                %td= f.text_field :improve, class: 'full'
+              %tr.danger
+                %td.column 趣味
+                %td= f.text_field :hobby, class: 'full'
+              %tr
+                %td.column 好きなこと
+                %td= f.text_field :like, class: 'full'
+              %tr.danger
+                %td.column 座右の銘
+                %td= f.text_field :motto, class: 'full'
+      .col-lg-6
+        .bs-component
+          .panel.panel-warning
+            .panel-heading
+              %h3.panel-title EDUPEDIAの活動
+          %table.table.table-striped.table-hover
+            %tbody
+              %tr.warning
+                %td.column 活動拠点
+                %td= f.select :location, [['関東', 'kanto'], ['関西', 'kansai'], ['九州', 'kyushu']]
+              %tr
+                %td.column 専門班
+                %td= f.text_field :team, placeholder: '例：計画推進, QM', class: 'full'
+              %tr.warning
+                %td.column 役職
+                %td= f.select :position, [['メンバー', 'member'], ['リーダー', 'leader'], ['PL', 'pl']]
+              %tr
+                %td.column 現在やっていること
+                %td= f.text_field :doing, placeholder: '例：小学校の国語の取材', class: 'full'
+              %tr.warning
+                %td.column 今後やりたいこと
+                %td= f.text_field :future_doing, placeholder: '例：高校の記事を今の倍にする', class: 'full'
+              %tr
+                %td.column EDUPEDIA開始時期
+                %td= f.text_field :start_time, placeholder: '例：2016年4月', class: 'full'
+              %tr.warning
+                %td.column EDUPEDIAに入ったきっかけ
+                %td= f.text_area :trigger, placeholder: '例：忙しい先生の力になりたかったから', class: 'full'
+      .col-lg-6
+        .bs-component
+          .panel.panel-success
+            .panel-heading
+              %h3.panel-title EDUPEDIA外の活動
+          %table.table.table-striped.table-hover
+            %tbody
+              %tr.success
+                %td.column その他のROJE所属プロジェクト・課
+                %td= f.text_field :roje, placeholder: '例：comp、管理課', class: 'full'
+              %tr
+                %td.column ROJE外の活動
+                %td= f.text_area :outside, placeholder: '例：2016年4月~現在：テニスサークル, 2017年4月~現在：株式会社○○長期インターン  ', class: 'full'
+      .col-lg-6
+        .bs-component
+          .panel.panel-active
+            .panel-heading
+              %h3.panel-title メモ
+          %table.table.table-striped.table-hover
+            %tbody
+              %tr.actice
+                %td.column メモ
+                %td= f.text_field :memo, class: 'full'
+        .bs-component
+          .btn.pri-mary
+            = f.submit class: 'btn btn-primary submit'
