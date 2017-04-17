@@ -18,7 +18,7 @@
           %li
             = link_to '自分のページ', user_path(current_user)
           %li
-            = link_to 'ページを編集', edit_user_registration_path(current_user)
+            = link_to 'ページを編集', edit_user_path(current_user)
           %li
             = link_to 'サインアウト', destroy_user_session_path, method: :delete
       //not login
