@@ -1,8 +1,11 @@
 //ボタン
+
+//大きいボタン
 .wide {
   padding: 6px 50px;
 }
 
+//小さいボタン
 .small {
   padding: 1px 6px;
   font-size: 14px;
@@ -72,4 +75,11 @@ td {
 //テーブルの項目の文字を太字に変更
 .column  {
   font-weight:bold;
+}
+
+//フォーム
+
+//ユーザー情報編集フォームの幅を100%に拡張
+.full {
+  width: 100%;
 }
