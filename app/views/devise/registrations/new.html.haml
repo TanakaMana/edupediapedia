@@ -4,12 +4,12 @@
     = devise_error_messages!
     .field
       = f.label :name, '名前（例：山田 太郎）'
-      %br/
+      %br
       = f.text_field :name, autofocus: true
     .field
-      %br/
+      %br
       = f.label :name, '所属拠点（関東・関西・九州）'
-      %br/
+      %br
       %p.radio{for: 'kanto'} 関東
       = f.radio_button :location, 'kanto', checked: 'checked', class: 'field', id: 'kanto'
       %p.radio{for: 'kansai'} 関西
@@ -17,23 +17,23 @@
       %p.radio{for: 'kyushu'} 九州
       = f.radio_button :location, 'kyushu', class: 'field', id: 'kyuhsu'
     .field
-      %br/
+      %br
       = f.label :email
-      %br/
+      %br
       = f.email_field :email
     .field
       = f.label :password
       - if @minimum_password_length
         %em
           (英数字6文字以上)
-      %br/
+      %br
       = f.password_field :password, autocomplete: "off"
     .field
       = f.label :password_confirmation
-      %br/
+      %br
       = f.password_field :password_confirmation, autocomplete: "off"
     .field
-      %br/
+      %br
     .actions
       = f.submit '登録'
   = render "devise/shared/links"
