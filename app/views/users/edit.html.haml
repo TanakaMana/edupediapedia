@@ -4,7 +4,7 @@
       .bs-docs-section
         .row
           .col-lg-6
-            %h2.line= @user.name
+            %h2.line= @user.name + '（編集ページ）'
           .col-lg-6
             = link_to 'ページの編集', edit_user_path(@user.id), class: 'btn btn-primary edit'
 .container
