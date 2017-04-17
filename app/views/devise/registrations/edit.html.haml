@@ -11,13 +11,9 @@
         Currently waiting confirmation for: #{resource.unconfirmed_email}
     .field
       = f.label :password
-      %i (変更したくない場合は、空白のままにしておいてください)
+      %i (英数字6文字以上。変更したくない場合は、空白のままにしておいてください)
       %br/
       = f.password_field :password, autocomplete: "off"
-      - if @minimum_password_length
-        %br
-        %em
-          = '(英数字6文字以上)'
     .field
       = f.label :password_confirmation
       %br
@@ -28,6 +24,7 @@
       %br
       = f.password_field :current_password, autocomplete: "off"
     .actions
+      %br
       = f.submit '更新'
   -# %h3 Cancel my account
   -# %p
