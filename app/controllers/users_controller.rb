@@ -14,6 +14,10 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def update
+    User.find(params[:id]).update(user_params)
+  end
+
   private
 
   def set_user
