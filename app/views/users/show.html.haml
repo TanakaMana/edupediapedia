@@ -34,6 +34,9 @@
             %tr
               %td.column 学年
               %td= @user.year
+            %tr.info
+              %td.column 出身地
+              %td= @user.birthplace
     .col-lg-6
       .bs-component
         .panel.panel-danger
@@ -56,9 +59,6 @@
             %tr.danger
               %td.column 趣味
               %td= @user.hobby
-            %tr
-              %td.column 好きなこと
-              %td= @user.like
             %tr.danger
               %td.column 座右の銘
               %td= @user.motto
@@ -88,6 +88,9 @@
               %td.column EDUPEDIA開始時期
               %td= @user.start_time
             %tr.warning
+              %td.column EDUPEDIA退会時期
+              %td= @user.finish_time
+            %tr
               %td.column EDUPEDIAに入ったきっかけ
               %td= @user.trigger
     .col-lg-6

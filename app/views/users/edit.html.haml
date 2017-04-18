@@ -35,6 +35,9 @@
               %tr
                 %td.column 学年
                 %td= f.text_field :year, placeholder: '例：1', class: 'full'
+              %tr.info
+                %td.column 出身地
+                %td= f.text_field :birthplace, placeholder: '例：山口', class: 'full'
       .col-lg-6
         .bs-component
           .panel.panel-danger
@@ -57,9 +60,6 @@
               %tr.danger
                 %td.column 趣味
                 %td= f.text_field :hobby, class: 'full'
-              %tr
-                %td.column 好きなこと
-                %td= f.text_field :like, class: 'full'
               %tr.danger
                 %td.column 座右の銘
                 %td= f.text_field :motto, class: 'full'
@@ -86,11 +86,14 @@
                 %td.column 今後やりたいこと
                 %td= f.text_field :future_doing, placeholder: '例：高校の記事を今の倍にする', class: 'full'
               %tr
-                %td.column EDUPEDIA開始時期
-                %td= f.text_field :start_time, placeholder: '例：2016年4月', class: 'full'
-              %tr.warning
                 %td.column EDUPEDIAに入ったきっかけ
                 %td= f.text_area :trigger, placeholder: '例：忙しい先生の力になりたかったから', class: 'full'
+              %tr.warning
+                %td.column EDUPEDIA開始時期
+                %td= f.text_field :start_time, placeholder: '例：2016年4月', class: 'full'
+              %tr
+                %td.column EDUPEDIA退会時期
+                %td= f.text_field :start_time, placeholder: '例：2016年4月', class: 'full'
       .col-lg-6
         .bs-component
           .panel.panel-success
