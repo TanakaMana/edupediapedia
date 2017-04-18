@@ -36,7 +36,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.text    :specially
       t.text    :improve
       t.string  :hobby
-      t.text    :like
       t.string  :motto
 
       # EDUPEDIA外の活動

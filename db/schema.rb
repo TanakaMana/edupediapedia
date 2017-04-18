@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20170407231355) do
     t.text     "specially",              limit: 65535
     t.text     "improve",                limit: 65535
     t.string   "hobby"
-    t.text     "like",                   limit: 65535
     t.string   "motto"
     t.integer  "roje"
     t.text     "outside",                limit: 65535
