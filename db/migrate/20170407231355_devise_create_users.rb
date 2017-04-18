@@ -17,6 +17,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string  :faculty
       t.string  :department
       t.integer :year
+      t.string  :birthplace
 
       # EDUPEDIAの活動
       t.integer :location
@@ -24,8 +25,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.integer :position
       t.text    :doing
       t.text    :future_doing
-      t.string  :start_time
       t.text    :trigger
+      t.string  :start_time
+      t.string  :finish_time
+
 
       # 人柄
       t.text    :education_interest
