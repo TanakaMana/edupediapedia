@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 20170407231355) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.string   "email",                                default: "", null: false
-    t.string   "encrypted_password",                   default: "", null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.string   "university"
@@ -26,28 +26,28 @@ ActiveRecord::Schema.define(version: 20170407231355) do
     t.integer  "location"
     t.integer  "team"
     t.integer  "position"
-    t.text     "doing",                  limit: 65535
-    t.text     "future_doing",           limit: 65535
-    t.text     "trigger",                limit: 65535
+    t.string   "doing"
+    t.string   "future_doing"
+    t.string   "trigger"
     t.string   "start_time"
     t.string   "finish_time"
-    t.text     "education_interest",     limit: 65535
-    t.text     "future_work",            limit: 65535
-    t.text     "specially",              limit: 65535
-    t.text     "improve",                limit: 65535
+    t.string   "education_interest"
+    t.string   "future_work"
+    t.string   "specially"
+    t.string   "improve"
     t.string   "hobby"
     t.string   "motto"
     t.integer  "roje"
-    t.text     "outside",                limit: 65535
-    t.text     "memo",                   limit: 65535
+    t.string   "outside"
+    t.string   "memo"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                        default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

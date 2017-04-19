@@ -23,27 +23,27 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.integer :location
       t.integer :team
       t.integer :position
-      t.text    :doing
-      t.text    :future_doing
-      t.text    :trigger
+      t.string  :doing
+      t.string  :future_doing
+      t.string  :trigger
       t.string  :start_time
       t.string  :finish_time
 
 
       # 人柄
-      t.text    :education_interest
-      t.text    :future_work
-      t.text    :specially
-      t.text    :improve
+      t.string  :education_interest
+      t.string  :future_work
+      t.string  :specially
+      t.string  :improve
       t.string  :hobby
       t.string  :motto
 
       # EDUPEDIA外の活動
       t.integer :roje
-      t.text    :outside
+      t.string  :outside
 
       # メモ
-      t.text    :memo
+      t.string    :memo
       ## Rememberable
       t.datetime :remember_created_at
 
