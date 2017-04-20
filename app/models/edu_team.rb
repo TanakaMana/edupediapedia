@@ -1,0 +1,2 @@
+class EduTeam < ApplicationRecord
+end
