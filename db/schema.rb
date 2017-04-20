@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420005604) do
+ActiveRecord::Schema.define(version: 20170420010117) do
 
   create_table "edu_teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "team_name"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20170420005604) do
     t.string   "improve"
     t.string   "hobby"
     t.string   "motto"
-    t.integer  "roje"
     t.string   "outside"
     t.string   "memo"
     t.datetime "remember_created_at"
