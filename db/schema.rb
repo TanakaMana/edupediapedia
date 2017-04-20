@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420010117) do
+ActiveRecord::Schema.define(version: 20170420010340) do
 
   create_table "edu_teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "team_name"
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 20170420010117) do
     t.integer  "year"
     t.string   "birthplace"
     t.integer  "location"
-    t.integer  "team"
     t.integer  "position"
     t.string   "doing"
     t.string   "future_doing"
