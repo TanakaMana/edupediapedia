@@ -1,0 +1,2 @@
+class RojeProject < ApplicationRecord
+end
