@@ -1,2 +1,0 @@
-class EduProject < ApplicationRecord
-end
