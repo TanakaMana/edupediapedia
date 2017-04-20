@@ -7,3 +7,13 @@ position_name:
   member: メンバー
   leader: リーダー
   pl: プロジェクトリーダー
+
+edupedia_team:
+  writer: 取材
+  plan: 計画推進
+  qm: QM
+  bc: BC
+  hr: 人事
+  account: 会計
+  system: システム
+  leader: リーダー
