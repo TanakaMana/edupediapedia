@@ -74,7 +74,7 @@
               %td= Settings.location_name[@user.location]
             %tr
               %td.column 専門班
-              %td= @user.team
+              %td= Settings.edupedia_team[@edu_team.first.team_name]
             %tr.warning
               %td.column 役職
               %td= Settings.position_name[@user.position]
@@ -102,7 +102,7 @@
           %tbody
             %tr.success
               %td.column その他のROJE所属プロジェクト・課
-              %td= @user.roje
+              %td= Settings.roje_project[@roje_project.first.project_name]
             %tr
               %td.column ROJE外の活動
               %td= @user.outside
