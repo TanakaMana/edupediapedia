@@ -7,3 +7,25 @@ position_name:
   member: メンバー
   leader: リーダー
   pl: プロジェクトリーダー
+
+edupedia_team:
+  writer: 取材
+  plan: 計画推進
+  qm: QM
+  bc: BC
+  hr: 人事
+  account: 会計
+  system: システム
+
+roje_project:
+  vp: VP
+  kouko: 高校企画
+  tsubomi: つぼみ
+  gogatsusai: 五月祭
+  vary: VARY
+  comp: comp
+  kanfo: かんふぉ
+  management: 管理課
+  pr: 広報課
+  account: 会計課
+  leader: 事務局長
