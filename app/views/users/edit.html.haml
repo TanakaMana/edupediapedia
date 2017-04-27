@@ -81,10 +81,10 @@
                 %td= f.select :position, [['メンバー', 'member'], ['リーダー', 'leader'], ['PL', 'pl']]
               %tr
                 %td.column 現在やっていること
-                %td= f.text_field :doing, placeholder: '例：小学校の国語の取材', class: 'full'
+                %td= f.text_area :doing, placeholder: '例：小学校の国語の取材', class: 'full'
               %tr.warning
                 %td.column 今後やりたいこと
-                %td= f.text_field :future_doing, placeholder: '例：高校の記事を今の倍にする', class: 'full'
+                %td= f.text_area :future_doing, placeholder: '例：高校の記事を今の倍にする', class: 'full'
               %tr
                 %td.column EDUPEDIAに入ったきっかけ
                 %td= f.text_area :trigger, placeholder: '例：忙しい先生の力になりたかったから', class: 'full'
@@ -105,7 +105,7 @@
                 %td.column その他のROJE所属プロジェクト・課
                 %td
                   = f.fields_for :roje_projects, @roje_projects do |project|
-                    = project.select :project_name, [['VP', 'vp'], ['高校企画', 'kouko'], ['つぼみ', 'tsubomi'], ['五月祭', 'gogatsusai'], ['VARY', 'vary'], ['comp', 'comp'], ['かんふぉ', 'kanfo'], ['管理課', 'management'], ['広報課', 'pr'], ['会計課', 'account'], ['事務局長', 'leader']]
+                    = project.select :project_name, [['なし', 'nothing'], ['VP', 'vp'], ['高校企画', 'kouko'], ['つぼみ', 'tsubomi'], ['五月祭', 'gogatsusai'], ['VARY', 'vary'], ['comp', 'comp'], ['かんふぉ', 'kanfo'], ['管理課', 'management'], ['広報課', 'pr'], ['会計課', 'account'], ['事務局長', 'leader']]
               %tr
                 %td.column ROJE外の活動
                 %td= f.text_area :outside, placeholder: '例：2016年4月~現在：テニスサークル, 2017年4月~現在：株式会社○○長期インターン  ', class: 'full'
@@ -118,7 +118,7 @@
             %tbody
               %tr.actice
                 %td.column メモ
-                %td= f.text_field :memo, class: 'full'
+                %td= f.text_area :memo, class: 'full'
         .bs-component
           .btn.pri-mary
             = f.submit class: 'btn btn-primary submit'
