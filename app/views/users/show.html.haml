@@ -4,7 +4,7 @@
       .bs-docs-section
         .row
           .col-lg-6
-            %h2.line= @user.name
+            %h2.line= @user.name + '（詳細ページ）'
           .col-lg-6
             = link_to 'ページの編集', edit_user_path(@user.id), class: 'btn btn-primary edit'
 .container
@@ -62,6 +62,7 @@
             %tr.danger
               %td.column 座右の銘
               %td= @user.motto
+  .row
     .col-lg-6
       .bs-component
         .panel.panel-warning

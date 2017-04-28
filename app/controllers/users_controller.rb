@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
+    @user.save
     redirect_to user_path(@user.id)
   end
 
@@ -55,8 +56,8 @@ class UsersController < ApplicationController
       :motto,
       :outside,
       :memo,
-      edu_teams_attributes: [:team_name],
-      roje_projects_attributes: [:project_name]
+      edu_teams_attributes: [:id, :user_id, :team_name],
+      roje_projects_attributes: [:id, :user_id, :project_name]
       )
   end
 
