@@ -87,3 +87,38 @@ td {
 .full {
   width: 100%;
 }
+
+//フラッシュメッセージ
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  font-size: 18px;
+  text-align: center;
+ }
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 3px;
+ }
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  font-size: 18px;
+  text-align: center;
+ }
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 3px;
+ }

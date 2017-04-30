@@ -21,8 +21,9 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    @user.save
-    redirect_to user_path(@user.id)
+    if @user.save
+    redirect_to user_path(@user.id), notice: 'ユーザー情報が更新されました。'
+    end
   end
 
   private
