@@ -15,13 +15,7 @@
                   %a.btn.wide.btn-warning{"data-toggle" => "tab", :href => "#kansai"} 関西
                 %li
                   %a.btn.wide.btn-success{"data-toggle" => "tab", :href => "#kyushu"} 九州
-            -# %h1#nav-tabs EDUPEDIAメンバー
-            -# %p.bs-component
-            -#   %a.btn.wide.btn-info{:href => "#all"} 全体
-            -#   %a.btn.wide.btn-danger{:href => "#kanto"} 関東
-            -#   %a.btn.wide.btn-warning{:href => "#kansai"} 関西
-            -#   %a.btn.wide.btn-success{:href => "#kyushu"} 九州
-  #myTabContent.tab-content
+  #all.tab-content
     #kanto.tab-pane.fade.active.in
       %h4.admin-label 関東
       %table.table.table-striped.table-hover
@@ -92,3 +86,5 @@
             %td
               = link_to '個人ページへ', user_path(kyushu_user.id), class: 'btn small btn-primary'
 
+window.onload = function(){
+}
