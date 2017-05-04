@@ -36,6 +36,11 @@
   margin: 28px 28px 28px 450px;
 }
 
+//タブ切り替えボタンの調整
+.nav > li > a {
+  padding: 10px 45px;
+}
+
 //トップページのプロジェクトラベルを追加
 .admin-label {
   padding: 3px 3px 3px 10px;
