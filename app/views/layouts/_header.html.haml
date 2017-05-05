@@ -23,12 +23,6 @@
             = link_to 'ログイン情報の更新',edit_user_registration_path(current_user)
           %li
             = link_to 'サインアウト', destroy_user_session_path, method: :delete
-      //not login
-  -else
-    %ul.nav.navbar-nav.navbar-right
-      %li
-        .btn.btn-head.navbar-btn
-          = link_to 'はじめる', new_user_session_path
 .container
   .row
     .col-lg-12
