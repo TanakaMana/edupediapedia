@@ -4,7 +4,7 @@
       .bs-docs-section
         .row
           .col-lg-6
-            %h2.line= @user.name + '（編集ページ）'
+            %h2.line= @user.name + '（編集）'
 .container
   = form_for @user do |f|
     .row
@@ -47,7 +47,7 @@
                 %td.column 興味のある教育分野
                 %td= f.text_field :education_interest, class: 'full'
               %tr
-                %td.column 将来就きたい仕事
+                %td.column 将来やりたい仕事
                 %td= f.text_field :future_work, class: 'full'
               %tr.danger
                 %td.column 得意なこと
