@@ -4,9 +4,7 @@
       .bs-docs-section
         .row
           .col-lg-6
-            %h2.line= @user.name + '（詳細ページ）'
-          .col-lg-6
-            = link_to 'ページの編集', edit_user_path(@user.id), class: 'btn btn-primary edit'
+            %h2.line= @user.name + '（詳細）'
 .container
   .row
     .col-lg-6
@@ -48,7 +46,7 @@
               %td.column 興味のある教育分野
               %td= @user.education_interest
             %tr
-              %td.column 将来就きたい仕事
+              %td.column 将来やりたい仕事
               %td= @user.future_work
             %tr.danger
               %td.column 得意なこと
