@@ -10,13 +10,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @edu_team = @user.edu_teams.includes(:user)
-    @roje_project = @user.roje_projects.includes(:user)
   end
 
   def edit
-    @edu_teams = EduTeam.new
-    @roje_projects = RojeProject.new
   end
 
   def update
@@ -43,6 +39,8 @@ class UsersController < ApplicationController
       :year,
       :birthplace,
       :location,
+      :team_main,
+      :team_sub,
       :position,
       :doing,
       :future_doing,
@@ -55,10 +53,9 @@ class UsersController < ApplicationController
       :improve,
       :hobby,
       :motto,
+      :roje,
       :outside,
-      :memo,
-      edu_teams_attributes: [:id, :user_id, :team_name],
-      roje_projects_attributes: [:id, :user_id, :project_name]
+      :memo
     )
   end
 
