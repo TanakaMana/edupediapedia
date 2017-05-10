@@ -21,7 +21,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
       # EDUPEDIAの活動
       t.integer :location
-      t.integer :team
+      t.integer :team_main
+      t.string  :team_sub
       t.integer :position
       t.string  :doing
       t.string  :future_doing

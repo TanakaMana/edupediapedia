@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420010340) do
-
-  create_table "edu_teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "team_name"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_edu_teams_on_user_id", using: :btree
-  end
-
-  create_table "roje_projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "project_name"
-    t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["user_id"], name: "index_roje_projects_on_user_id", using: :btree
-  end
+ActiveRecord::Schema.define(version: 20170407231355) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -40,6 +24,8 @@ ActiveRecord::Schema.define(version: 20170420010340) do
     t.integer  "year"
     t.string   "birthplace"
     t.integer  "location"
+    t.integer  "team_main"
+    t.string   "team_sub"
     t.integer  "position"
     t.string   "doing"
     t.string   "future_doing"
@@ -52,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170420010340) do
     t.string   "improve"
     t.string   "hobby"
     t.string   "motto"
+    t.integer  "roje"
     t.string   "outside"
     t.string   "memo"
     t.datetime "remember_created_at"
