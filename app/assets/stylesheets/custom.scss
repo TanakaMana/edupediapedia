@@ -66,6 +66,10 @@
   padding: 22px 40px;
 }
 
+.navbar-fixed-top {
+  border-width: 0 0 3px;
+}
+
 //各ページトップのh1に下線を追加
 .line {
   border-left: solid 5px;
@@ -108,7 +112,6 @@ td {
   color: #b94a48;
   font-size: 18px;
   text-align: center;
-  padding-top: 3px;
  }
 
 .alert-success {
@@ -125,5 +128,5 @@ td {
   color: #468847;
   font-size: 18px;
   text-align: center;
-  padding-top: 9px;
+  padding-top: 12px;
  }
