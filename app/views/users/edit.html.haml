@@ -24,13 +24,13 @@
           %table.table.table-striped.table-hover
             %tbody
               %tr.info
-                %td.column 名前
+                %td.column 名前 *
                 %td= @user.name
               %tr
                 %td.column メールアドレス
                 %td= @user.email
               %tr.info
-                %td.column 大学
+                %td.column 大学 *
                 %td= f.text_field :university, placeholder: '例：EDU大学', class: 'full'
               %tr
                 %td.column 学部
@@ -39,7 +39,7 @@
                 %td.column 学科
                 %td= f.text_field :department, placeholder: '例：教育学科', class: 'full'
               %tr
-                %td.column 学年
+                %td.column 学年 *
                 %td= f.text_field :year, placeholder: '例：1', class: 'full'
               %tr.info
                 %td.column 出身地
@@ -78,10 +78,10 @@
           %table.table.table-striped.table-hover
             %tbody
               %tr.warning
-                %td.column 活動拠点
+                %td.column 活動拠点 *
                 %td= f.select :location, [['関東', 'kanto'], ['関西', 'kansai'], ['九州', 'kyushu']]
               %tr
-                %td.column 専門班
+                %td.column 専門班 *
                 %td= f.select :team_main, [['取材', 'writer'], ['計画推進', 'plan'], ['QM', 'qm'], ['BC', 'bc'], ['人事', 'hr'], ['会計', 'account'], ['システム', 'system']]
               %tr.warning
                 %td.column 専門班(複数兼任の場合記入)
@@ -90,7 +90,7 @@
                 %td.column 役職
                 %td= f.select :position, [['メンバー', 'member'], ['リーダー', 'leader'], ['PL', 'pl']]
               %tr.warning
-                %td.column 現在やっていること
+                %td.column 現在やっていること *
                 %td= f.text_area :doing, placeholder: '例：小学校の国語の取材', class: 'full'
               %tr
                 %td.column 今後やりたいこと
