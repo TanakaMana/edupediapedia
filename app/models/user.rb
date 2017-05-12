@@ -2,8 +2,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # has_many :edu_teams
-  # has_many :roje_projects
+  has_many :project_users, dependent: :delete_all
+  has_many :projects, through: :project_users
 
   # accepts_nested_attributes_for :edu_teams, reject_if: :reject_team_name
   # accepts_nested_attributes_for :roje_projects, reject_if: :reject_project_name
