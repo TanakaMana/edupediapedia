@@ -2,7 +2,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :university, :year, :team_main, :doing
   # has_many :edu_teams
   # has_many :roje_projects
 

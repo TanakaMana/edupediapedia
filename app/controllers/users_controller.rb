@@ -19,8 +19,6 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.save
       redirect_to user_path(@user.id), notice: 'ユーザー情報が更新されました。'
-    else
-      render 'edit'
     end
   end
 
