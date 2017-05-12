@@ -8,6 +8,9 @@
       %a.navbar-brand(href="/")
         = image_tag("edu_logo.png", alt: "EDUPEDIAPEDIA")
     #navbar-main.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li.active
+          = link_to '取材管理'
       //login
       -if user_signed_in?
         %ul.nav.navbar-nav.navbar-right
