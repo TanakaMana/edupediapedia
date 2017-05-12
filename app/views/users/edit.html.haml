@@ -2,17 +2,8 @@
   .row
     .col-lg-12
       .bs-docs-section
-        .row
-          - if @user && @user.errors.any?
-            %h2
-              = @user.errors.count
-              件のエラーがあります。
-            %ul
-            - @user.errors.full_messages.each do |message|
-              %li.alert-error
-                = message
-          .col-lg-6
-            %h2.line= @user.name + '（編集）'
+        .rows
+          %h2.line= @user.name + '（編集）'
 .container
   = form_for @user do |f|
     .row
