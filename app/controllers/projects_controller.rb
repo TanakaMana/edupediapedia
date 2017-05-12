@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+  before_action :set_project, only: [:show, :edit, :update]
+
   def index
   end
 
@@ -16,6 +18,12 @@ class ProjectsController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 
 end
