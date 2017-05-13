@@ -1,0 +1,167 @@
+.container
+  .row
+    .col-lg-12
+      .bs-docs-section
+        .row
+          .col-lg-6
+            %h2.line#nav-tabs プロジェクト管理
+            = link_to '新規作成', new_project_path, class: 'btn btn-primary edit'
+            .bs-component
+              %ul.nav.nav-tabs
+                %li.active
+                  %a.btn.wide.btn-primary{"data-toggle" => "tab", :href => "#all"} 全て
+                %li
+                  %a.btn.wide.btn-info{"data-toggle" => "tab", :href => "#doing"} 進行中
+                %li
+                  %a.btn.wide.btn-danger{"data-toggle" => "tab", :href => "#stagnation"} 停滞中
+                %li
+                  %a.btn.wide.btn-success{"data-toggle" => "tab", :href => "#done"} 完了
+                %li
+                  %a.btn.wide.btn-warning{"data-toggle" => "tab", :href => "#done"} 企画中
+  .tab-content
+    #all.tab-pane.fade.active.in
+      %h4.admin-label 全て
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th id
+            %th プロジェクト名
+            %th 大学名
+            %th 活動拠点
+            %th 専門班
+            %th 今やっていること
+            %th 詳細
+        %tbody
+        -# - @kanto_users.each do |kanto_user|
+        -#   -# %tr{ class: cycle('info', '') }
+        -#   -#   - kanto_user
+        -#   %tr.info
+        -#     %td= kanto_user.year
+        -#     %td= kanto_user.name
+        -#     %td= kanto_user.university
+        -#     %td= Settings.location_name.kanto
+        -#     %td= Settings.edupedia_team[kanto_user.team_main]
+        -#     %td= kanto_user.doing
+        -#     %td
+        -#       = link_to '個人ページへ', user_path(kanto_user.id), class: 'btn small btn-primary'
+    -#   %h4.admin-label 関西
+    -#   %table.table.table-striped.table-hover
+    -#     %thead
+    -#       %tr
+    -#         %th 学年
+    -#         %th 名前
+    -#         %th 大学名
+    -#         %th 活動拠点
+    -#         %th 専門班
+    -#         %th 今やっていること
+    -#         %th 詳細
+    -#     %tbody
+    -#     - @kansai_users.each do |kansai_user|
+    -#       -# %tr{ class: cycle('info', '') }
+    -#       -#   - kanto_user
+    -#       %tr.info
+    -#         %td= kansai_user.year
+    -#         %td= kansai_user.name
+    -#         %td= kansai_user.university
+    -#         %td= Settings.location_name.kansai
+    -#         %td= Settings.edupedia_team[kansai_user.team_main]
+    -#         %td= kansai_user.doing
+    -#         %td
+    -#           = link_to '個人ページへ', user_path(kansai_user.id), class: 'btn small btn-primary'
+    -#   %h4.admin-label 九州
+    -#   %table.table.table-striped.table-hover
+    -#     %thead
+    -#       %tr
+    -#         %th 学年
+    -#         %th 名前
+    -#         %th 大学名
+    -#         %th 活動拠点
+    -#         %th 専門班
+    -#         %th 今やっていること
+    -#         %th 詳細
+    -#     %tbody
+    -#     - @kyushu_users.each do |kyushu_user|
+    -#       -# %tr{ class: cycle('info', '') }
+    -#       -#   - kanto_user
+    -#       %tr.info
+    -#         %td= kyushu_user.year
+    -#         %td= kyushu_user.name
+    -#         %td= kyushu_user.university
+    -#         %td= Settings.location_name.kyushu
+    -#         %td= Settings.edupedia_team[kyushu_user.team_main]
+    -#         %td= kyushu_user.doing
+    -#         %td
+    -#           = link_to '個人ページへ', user_path(kyushu_user.id), class: 'btn small btn-primary'
+
+    -# #kanto.tab-pane.fade
+    -#   %table.table.table-striped.table-hover
+    -#     %thead
+    -#       %tr
+    -#         %th 学年
+    -#         %th 名前
+    -#         %th 大学名
+    -#         %th 活動拠点
+    -#         %th 専門班
+    -#         %th 今やっていること
+    -#         %th 詳細
+    -#     %tbody
+    -#     - @kanto_users.each do |kanto_user|
+    -#       -# %tr{ class: cycle('info', '') }
+    -#       -#   - kanto_user
+    -#       %tr.info
+    -#         %td= kanto_user.year
+    -#         %td= kanto_user.name
+    -#         %td= kanto_user.university
+    -#         %td= Settings.location_name.kanto
+    -#         %td= Settings.edupedia_team[kanto_user.team_main]
+    -#         %td= kanto_user.doing
+    -#         %td
+    -#           = link_to '個人ページへ', user_path(kanto_user.id), class: 'btn small btn-primary'
+    -# #kansai.tab-pane.fade
+    -#   %table.table.table-striped.table-hover
+    -#     %thead
+    -#       %tr
+    -#         %th 学年
+    -#         %th 名前
+    -#         %th 大学名
+    -#         %th 活動拠点
+    -#         %th 専門班
+    -#         %th 今やっていること
+    -#         %th 詳細
+    -#     %tbody
+    -#     - @kansai_users.each do |kansai_user|
+    -#       -# %tr{ class: cycle('info', '') }
+    -#       -#   - kanto_user
+    -#       %tr.info
+    -#         %td= kansai_user.year
+    -#         %td= kansai_user.name
+    -#         %td= kansai_user.university
+    -#         %td= Settings.location_name.kansai
+    -#         %td= Settings.edupedia_team[kansai_user.team_main]
+    -#         %td= kansai_user.doing
+    -#         %td
+    -#           = link_to '個人ページへ', user_path(kansai_user.id), class: 'btn small btn-primary'
+    -# #kyushu.tab-pane.fade
+    -#   %table.table.table-striped.table-hover
+    -#     %thead
+    -#       %tr
+    -#         %th 学年
+    -#         %th 名前
+    -#         %th 大学名
+    -#         %th 活動拠点
+    -#         %th 専門班
+    -#         %th 今やっていること
+    -#         %th 詳細
+    -#     %tbody
+    -#     - @kyushu_users.each do |kyushu_user|
+    -#       -# %tr{ class: cycle('info', '') }
+    -#       -#   - kanto_user
+    -#       %tr.info
+    -#         %td= kyushu_user.year
+    -#         %td= kyushu_user.name
+    -#         %td= kyushu_user.university
+    -#         %td= Settings.location_name.kyushu
+    -#         %td= Settings.edupedia_team[kyushu_user.team_main]
+    -#         %td= kyushu_user.doing
+    -#         %td
+    -#           = link_to '個人ページへ', user_path(kyushu_user.id), class: 'btn small btn-primary'
