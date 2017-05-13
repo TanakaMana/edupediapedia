@@ -3,12 +3,15 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update]
 
   def index
+    @projects = Project.all
   end
 
   def new
+    @project = Project.new
   end
 
   def create
+    @project = Project.new(project_params)
   end
 
   def show
