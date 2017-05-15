@@ -21,6 +21,10 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    @project.update(project_params)
+    if @project.save
+      redirect_to project_path(@project.id), notice: 'プロジェクト情報が更新されました。'
+    end
   end
 
   private
