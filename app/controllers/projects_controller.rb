@@ -27,6 +27,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project.destroy
+    redirect_to root_path, notice: 'プロジェクトの削除に成功しました。'
+  end
+
   private
 
   def set_project
