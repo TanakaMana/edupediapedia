@@ -22,36 +22,34 @@
                     = f.text_area :activity, class: 'form-control', rows: 3
                 .form-group
                   .col-lg-2.control-label
-                    = f.label :goal, 'ゴール'
+                    = f.label :goal, '目的・ゴール'
                   .col-lg-10#textArea
                     = f.text_area :goal, class: 'form-control', rows: 3
                 .form-group
                   .col-lg-2.control-label
-                    = f.label :start, 'start'
+                    = f.label :start, '開始時期'
                   .col-lg-10
                     = f.text_field :start
                 .form-group
                   .col-lg-2.control-label
-                    = f.label :finish, 'finish'
+                    = f.label :finish, '終了時期（予定）'
                   .col-lg-10
                     = f.text_field :project_name, autofocus: true
                 .form-group
-                  %label.col-lg-2.control-label{:for => "select"} Selects
+                  %label.col-lg-2.control-label{:for => "select"} ステータス
                   .col-lg-10
                     %select#select.form-control
-                      %option 1
-                      %option 2
-                      %option 3
-                      %option 4
-                      %option 5
-                    %br/
-                    %select.form-control{:multiple => "multiple"}
-                      %option 1
-                      %option 2
-                      %option 3
-                      %option 4
-                      %option 5
+                      %option 計画中
+                      %option 進行中
+                      %option 停滞中
+                      %option 完了
+                    -# %select.form-control{:multiple => "multiple"}
+                    -#   %option 1
+                    -#   %option 2
+                    -#   %option 3
+                    -#   %option 4
+                    -#   %option 5
                 .form-group
                   .col-lg-10.col-lg-offset-2
-                    %button.btn.btn-default{:type => "reset"} Cancel
-                    %button.btn.btn-primary{:type => "submit"} Submit
+                    .btn.btn-default{:type => "reset"} キャンセル
+                    .btn.btn-primary{:type => "submit"} 保存
