@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    send_data render_to_string, filename: 'edupedia_member.csv', type: :csv
     @kanto_users = User.where(location: 0)
     @kansai_users = User.where(location: 1)
     @kyushu_users = User.where(location: 2)
