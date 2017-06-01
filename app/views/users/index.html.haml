@@ -15,6 +15,8 @@
                   %a.btn.wide.btn-warning{"data-toggle" => "tab", :href => "#kansai"} 関西
                 %li
                   %a.btn.wide.btn-success{"data-toggle" => "tab", :href => "#kyushu"} 九州
+                %li
+                  = link_to 'CSV出力', csv_output_users_path(format: :csv), class: 'btn wide btn-primary'
   .tab-content
     #all.tab-pane.fade.active.in
       %h4.admin-label 関東
