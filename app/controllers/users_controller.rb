@@ -4,8 +4,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @users = User.all
-    send_data render_to_string, filename: 'edupedia_member.csv', type: :csv
     @kanto_users = User.where(location: 0)
     @kansai_users = User.where(location: 1)
     @kyushu_users = User.where(location: 2)
@@ -21,6 +19,15 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.save
       redirect_to user_path(@user.id), notice: 'ユーザー情報が更新されました。'
+    end
+  end
+
+  def csv_output
+    @users = User.all
+    respond_to do |format|
+      format.csv do
+        send_data render_to_string, filename: 'edupedia_member.csv', type: :csv
+      end
     end
   end
 
