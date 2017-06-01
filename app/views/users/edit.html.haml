@@ -31,7 +31,7 @@
                 %td= f.text_field :department, placeholder: '例：教育学科', class: 'full'
               %tr
                 %td.column 学年 *
-                %td= f.text_field :year, placeholder: '例：1', class: 'full'
+                %td= f.select :year, [['1年', 'one'], ['2年', 'two'], ['3年', 'three'], ['4年', 'four'], ['5年', 'five'], ['院1年', 'graduate_first'], ['院2年', 'graduate_second'], ['社会人', 'society'], ['教員', 'teacher'], ['その他', 'other_year']]
               %tr.info
                 %td.column 出身地
                 %td= f.text_field :birthplace, placeholder: '例：山口', class: 'full'

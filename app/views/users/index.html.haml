@@ -33,7 +33,7 @@
           -# %tr{ class: cycle('info', '') }
           -#   - kanto_user
           %tr.info
-            %td= kanto_user.year
+            %td= Settings.year[kanto_user.year]
             %td= kanto_user.name
             %td= kanto_user.university
             %td= Settings.location_name.kanto
@@ -57,7 +57,7 @@
           -# %tr{ class: cycle('info', '') }
           -#   - kanto_user
           %tr.info
-            %td= kansai_user.year
+            %td= Settings.year[kansai_user.year]
             %td= kansai_user.name
             %td= kansai_user.university
             %td= Settings.location_name.kansai
@@ -81,7 +81,7 @@
           -# %tr{ class: cycle('info', '') }
           -#   - kanto_user
           %tr.info
-            %td= kyushu_user.year
+            %td= Settings.year[kyushu_user.year]
             %td= kyushu_user.name
             %td= kyushu_user.university
             %td= Settings.location_name.kyushu

@@ -16,6 +16,7 @@ class User < ApplicationRecord
   #   attributed['project_name'].blank?
   # end
 
+  enum year: { one: 1, two: 2, three: 3, four: 4, five: 5, graduate_first: 6, graduate_second: 7, society: 8, teacher: 9, other_year: 10 }
   enum location: { kanto: 0, kansai: 1, kyushu: 2 }
   enum team_main: { writer: 0, plan: 1, qm: 2, bc: 3, hr: 4, account: 5, system: 6 }
   enum position: { member: 0, leader: 1, pl: 2 }

@@ -3,6 +3,18 @@ location_name:
   kansai: 関西
   kyushu: 九州
 
+year:
+  one: 1年
+  two: 2年
+  three: 3年
+  four: 4年
+  five: 5年
+  graduate_first: 院1年
+  graduate_second: 院2年
+  society: 社会人
+  teacher: 教員
+  other_year: その他
+
 position_name:
   member: メンバー
   leader: リーダー
