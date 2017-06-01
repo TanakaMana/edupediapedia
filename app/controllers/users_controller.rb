@@ -22,6 +22,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def csv_output
+    @users = User.all
+    respond_to do |format|
+      format.csv do
+        send_data render_to_string, filename: 'edupedia_member.csv', type: :csv
+      end
+    end
+  end
+
   private
 
   def set_user
