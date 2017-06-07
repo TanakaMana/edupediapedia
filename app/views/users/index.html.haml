@@ -16,7 +16,8 @@
                 %li
                   %a.btn.wide.btn-success{"data-toggle" => "tab", :href => "#kyushu"} 九州
                 %li
-                  = link_to 'CSV出力', csv_output_users_path(format: :csv), class: 'btn wide btn-primary'
+                  = link_to 'CSV出力', csv_output_users_path(format: :csv), id: 'alert', class: 'btn wide btn-primary'
+                  -# , :onclick => 'alert("メンバー情報のCSVを出力しますか？")'
   .tab-content
     #all.tab-pane.fade.active.in
       %h4.admin-label 関東
@@ -26,7 +27,6 @@
             %th 学年
             %th 名前
             %th 大学名
-            %th 活動拠点
             %th 専門班
             %th 今やっていること
             %th 詳細
@@ -38,7 +38,6 @@
             %td= Settings.year[kanto_user.year]
             %td= kanto_user.name
             %td= kanto_user.university
-            %td= Settings.location_name.kanto
             %td= Settings.edupedia_team[kanto_user.team_main]
             %td= kanto_user.doing
             %td
@@ -50,7 +49,6 @@
             %th 学年
             %th 名前
             %th 大学名
-            %th 活動拠点
             %th 専門班
             %th 今やっていること
             %th 詳細
@@ -62,7 +60,6 @@
             %td= Settings.year[kansai_user.year]
             %td= kansai_user.name
             %td= kansai_user.university
-            %td= Settings.location_name.kansai
             %td= Settings.edupedia_team[kansai_user.team_main]
             %td= kansai_user.doing
             %td
@@ -74,7 +71,6 @@
             %th 学年
             %th 名前
             %th 大学名
-            %th 活動拠点
             %th 専門班
             %th 今やっていること
             %th 詳細
@@ -86,7 +82,6 @@
             %td= Settings.year[kyushu_user.year]
             %td= kyushu_user.name
             %td= kyushu_user.university
-            %td= Settings.location_name.kyushu
             %td= Settings.edupedia_team[kyushu_user.team_main]
             %td= kyushu_user.doing
             %td
@@ -99,7 +94,6 @@
             %th 学年
             %th 名前
             %th 大学名
-            %th 活動拠点
             %th 専門班
             %th 今やっていること
             %th 詳細
@@ -111,7 +105,6 @@
             %td= kanto_user.year
             %td= kanto_user.name
             %td= kanto_user.university
-            %td= Settings.location_name.kanto
             %td= Settings.edupedia_team[kanto_user.team_main]
             %td= kanto_user.doing
             %td
@@ -123,7 +116,6 @@
             %th 学年
             %th 名前
             %th 大学名
-            %th 活動拠点
             %th 専門班
             %th 今やっていること
             %th 詳細
@@ -135,7 +127,6 @@
             %td= kansai_user.year
             %td= kansai_user.name
             %td= kansai_user.university
-            %td= Settings.location_name.kansai
             %td= Settings.edupedia_team[kansai_user.team_main]
             %td= kansai_user.doing
             %td
@@ -147,7 +138,6 @@
             %th 学年
             %th 名前
             %th 大学名
-            %th 活動拠点
             %th 専門班
             %th 今やっていること
             %th 詳細
@@ -159,7 +149,6 @@
             %td= kyushu_user.year
             %td= kyushu_user.name
             %td= kyushu_user.university
-            %td= Settings.location_name.kyushu
             %td= Settings.edupedia_team[kyushu_user.team_main]
             %td= kyushu_user.doing
             %td
