@@ -11,45 +11,28 @@
             %form.form-horizontal
               %fieldset
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :project_name, 'プロジェクト名'
-                  .col-lg-10
-                    = f.text_field :project_name, autofocus: true
+                  = f.label :project_name, 'プロジェクト名'
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :activity, '内容'
-                  .col-lg-10#textArea
-                    = f.text_area :activity, class: 'form-control', rows: 3
+                  = f.text_field :project_name, autofocus: true
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :goal, '目的・ゴール'
-                  .col-lg-10#textArea
-                    = f.text_area :goal, class: 'form-control', rows: 3
+                  = f.label :activity, '内容'
+                .form-group#textArea
+                  = f.text_area :activity, class: 'form-control', rows: 3
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :start, '開始時期'
-                  .col-lg-10
-                    = f.text_field :start
+                  = f.label :goal, '目的・ゴール'
+                .form-group#textArea
+                  = f.text_area :goal, class: 'form-control', rows: 3
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :finish, '終了時期（予定）'
-                  .col-lg-10
-                    = f.text_field :project_name, autofocus: true
+                  = f.label :start, '開始時期'
                 .form-group
-                  %label.col-lg-2.control-label{:for => "select"} ステータス
-                  .col-lg-10
-                    %select#select.form-control
-                      %option 計画中
-                      %option 進行中
-                      %option 停滞中
-                      %option 完了
-                    -# %select.form-control{:multiple => "multiple"}
-                    -#   %option 1
-                    -#   %option 2
-                    -#   %option 3
-                    -#   %option 4
-                    -#   %option 5
+                  = f.text_field :start
                 .form-group
-                  .col-lg-10.col-lg-offset-2
-                    .btn.btn-default{:type => "reset"} キャンセル
-                    .btn.btn-primary{:type => "submit"} 保存
+                  = f.label :finish, '終了時期（予定）'
+                .form-group
+                  = f.text_field :project_name, autofocus: true
+                .form-group
+                  = f.label :status, 'ステータス'
+                .form-group#select
+                  = f.select :status, [['計画中', 'planning'], ['進行中', 'doing'], ['停滞中', 'stagnation'], ['完了', 'done']]
+                .form-group
+                  = f.submit class: 'btn btn-primary submit'
