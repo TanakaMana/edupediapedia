@@ -33,6 +33,6 @@
                 .form-group
                   = f.label :status, 'ステータス'
                 .form-group#select
-                  = f.select :status, [['計画中', 'planning'], ['進行中', 'doing'], ['停滞中', 'stagnation'], ['完了', 'done']]
+                  = f.select :status, [['企画中', 'planning'], ['進行中', 'doing'], ['停滞中', 'stagnation'], ['完了', 'done']]
                 .form-group
                   = f.submit class: 'btn btn-primary submit'
