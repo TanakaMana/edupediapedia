@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @kanto_users = User.where(location: 0)
-    @kansai_users = User.where(location: 1)
-    @kyushu_users = User.where(location: 2)
+    @kanto_users = User.where(location: 'kanto')
+    @kansai_users = User.where(location: 'kansai')
+    @kyushu_users = User.where(location: 'kyushu')
   end
 
   def show
