@@ -26,25 +26,17 @@
           %tr
             %th id
             %th プロジェクト名
-            %th 大学名
-            %th 活動拠点
-            %th 専門班
-            %th 今やっていること
+            %th ゴール
             %th 詳細
         %tbody
-        -# - @kanto_users.each do |kanto_user|
-        -#   -# %tr{ class: cycle('info', '') }
-        -#   -#   - kanto_user
-        -#   %tr.info
-        -#     %td= kanto_user.year
-        -#     %td= kanto_user.name
-        -#     %td= kanto_user.university
-        -#     %td= Settings.location_name.kanto
-        -#     %td= Settings.edupedia_team[kanto_user.team_main]
-        -#     %td= kanto_user.doing
-        -#     %td
-        -#       = link_to '個人ページへ', user_path(kanto_user.id), class: 'btn small btn-primary'
-    -#   %h4.admin-label 関西
+        - @doing_projects.each do |doing_project|
+          %tr.info
+            %td= doing_project.id
+            %td= doing_project.project_name
+            %td= doing_project.goal
+            %td
+              = link_to '詳細ページへ', project_path(doing_project.id), class: 'btn small btn-primary'
+      -# %h4.admin-label 関西
     -#   %table.table.table-striped.table-hover
     -#     %thead
     -#       %tr
