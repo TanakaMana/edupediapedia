@@ -3,7 +3,10 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update]
 
   def index
-    @projects = Project.all
+    @doing_projects = Project.where(status: 'doing')
+    @stagnation_projects = Project.where(status: 'stagnation')
+    @done_projects = Project.where(status: 'done')
+    @planning_projects = Project.where(status: 'planning')
   end
 
   def new
