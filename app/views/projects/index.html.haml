@@ -79,9 +79,9 @@
         %tbody
         - @planning_projects.each do |planning_project|
           %tr.info
-            %td= done_project.id
-            %td= done_project.paroject_name
-            %td= done_project.goal
+            %td= planning_project.id
+            %td= planning_project.project_name
+            %td= planning_project.goal
             %td
               = link_to '詳細ページへ', project_path(planning_project.id), class: 'btn small btn-primary'
 
@@ -145,7 +145,7 @@
         - @planning_projects.each do |planning_project|
           %tr.info
             %td= planning_project.id
-            %td= planning_project.paroject_name
+            %td= planning_project.project_name
             %td= planning_project.goal
             %td
               = link_to '詳細ページへ', project_path(planning_project.id), class: 'btn small btn-primary'
