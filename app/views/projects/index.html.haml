@@ -84,3 +84,68 @@
             %td= done_project.goal
             %td
               = link_to '詳細ページへ', project_path(planning_project.id), class: 'btn small btn-primary'
+
+    #doing.tab-pane.dade
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th id
+            %th プロジェクト名
+            %th ゴール
+            %th 詳細
+        %tbody
+        - @doing_projects.each do |doing_project|
+          %tr.info
+            %td= doing_project.id
+            %td= doing_project.project_name
+            %td= doing_project.goal
+            %td
+              = link_to '詳細ページへ', project_path(doing_project.id), class: 'btn small btn-primary'
+    #stagnation.tab-pane.dade
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th id
+            %th プロジェクト名
+            %th ゴール
+            %th 詳細
+        %tbody
+        - @stagnation_projects.each do |stagnation_project|
+          %tr.info
+            %td= stagnation_project.id
+            %td= stagnation_project.project_name
+            %td= stagnation_project.goal
+            %td
+              = link_to '詳細ページへ', project_path(stagnation_project.id), class: 'btn small btn-primary'
+    #done.tab-pane.dade
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th id
+            %th プロジェクト名
+            %th ゴール
+            %th 詳細
+        %tbody
+        - @done_projects.each do |done_project|
+          %tr.info
+            %td= done_project.id
+            %td= done_project.paroject_name
+            %td= done_project.goal
+            %td
+              = link_to '詳細ページへ', project_path(done_project.id), class: 'btn small btn-primary'
+    #planning.tab-pane.dade
+      %table.table.table-striped.table-hover
+        %thead
+          %tr
+            %th id
+            %th プロジェクト名
+            %th ゴール
+            %th 詳細
+        %tbody
+        - @planning_projects.each do |planning_project|
+          %tr.info
+            %td= done_project.id
+            %td= done_project.paroject_name
+            %td= done_project.goal
+            %td
+              = link_to '詳細ページへ', project_path(planning_project.id), class: 'btn small btn-primary'
