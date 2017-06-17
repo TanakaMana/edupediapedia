@@ -34,8 +34,9 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project.destroy
-    redirect_to root_path, notice: 'プロジェクトが削除されました。'
+    project = Project.find(params[:id])
+    project.destroy
+    redirect_to projects_path, notice: 'プロジェクトが削除されました。'
   end
 
   private

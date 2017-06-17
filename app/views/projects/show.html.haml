@@ -1,39 +1,39 @@
 .container
-  = form_for @project do |f|
-    .bs-docs-section
-      .row
-        .col-lg-12
-          .page-header
-            %h1#forms
-              = @project.project_name + ' の詳細'
-      .row
-        .col-lg-7
-          .well.bs-component
-            %form.form-horizontal
-              %fieldset
-                .form-group
-                  = f.label :project_name, 'プロジェクト名'
-                .form-group
-                  = @project.project_name
-                .form-group
-                  = f.label :activity, '内容'
-                .form-group#textArea
-                  = @project.activity
-                .form-group
-                  = f.label :goal, '目的・ゴール'
-                .form-group#textArea
-                  = @project.goal
-                .form-group
-                  = f.label :start, '開始時期'
-                .form-group
-                  = @project.start
-                .form-group
-                  = f.label :finish, '終了時期（予定）'
-                .form-group
-                  = @project.finish
-                .form-group
-                  = f.label :status, 'ステータス'
-                .form-group#select
-                  = Settings.status[@project.status]
-                .form-group
-                  = f.submit class: 'btn btn-primary submit'
+  .bs-docs-section
+    .row
+      .col-lg-12
+        .page-header
+          %h1#forms
+            = @project.project_name + ' の詳細'
+    .row
+      .col-lg-7
+        .well.bs-component
+          %form.form-horizontal
+            %fieldset
+              .form-group
+                = label :project_name, 'プロジェクト名'
+              .form-group
+                = @project.project_name
+              .form-group
+                = label :activity, '内容'
+              .form-group#textArea
+                = @project.activity
+              .form-group
+                = label :goal, '目的・ゴール'
+              .form-group#textArea
+                = @project.goal
+              .form-group
+                = label :start, '開始時期'
+              .form-group
+                = @project.start
+              .form-group
+                = label :finish, '終了時期（予定）'
+              .form-group
+                = @project.finish
+              .form-group
+                = label :status, 'ステータス'
+              .form-group#select
+                = Settings.status[@project.status]
+              .form-group
+                = link_to '削除', project_path, data: { method: 'delete' }
+                = link_to '編集', project_path
