@@ -35,5 +35,5 @@
               .form-group#select
                 = Settings.status[@project.status]
               .form-group
-                = link_to '削除', project_path, data: { method: 'delete' }
-                = link_to '編集', project_path
+                = link_to '削除', project_path, data: { method: 'delete' }, class: 'btn btn-danger'
+                = link_to '編集', project_path(@project), class: 'btn btn-primary'
