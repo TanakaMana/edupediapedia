@@ -12,47 +12,28 @@
             %form.form-horizontal
               %fieldset
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :project_name, 'プロジェクト名'
-                  .col-lg-10
-                    = f.text_field :project_name, autofocus: true
+                  = f.label :project_name, 'プロジェクト名'
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :activity, '内容'
-                  .col-lg-10#textArea
-                    = f.text_area :activity, class: 'form-control', rows: 3
+                  = @project.project_name
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :goal, 'ゴール'
-                  .col-lg-10#textArea
-                    = f.text_area :goal, class: 'form-control', rows: 3
+                  = f.label :activity, '内容'
+                .form-group#textArea
+                  = @project.activity
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :start, 'start'
-                  .col-lg-10
-                    = f.text_field :start
+                  = f.label :goal, '目的・ゴール'
+                .form-group#textArea
+                  = @project.goal
                 .form-group
-                  .col-lg-2.control-label
-                    = f.label :finish, 'finish'
-                  .col-lg-10
-                    = f.text_field :project_name, autofocus: true
+                  = f.label :start, '開始時期'
                 .form-group
-                  %label.col-lg-2.control-label{:for => "select"} Selects
-                  .col-lg-10
-                    %select#select.form-control
-                      %option 1
-                      %option 2
-                      %option 3
-                      %option 4
-                      %option 5
-                    %br/
-                    %select.form-control{:multiple => "multiple"}
-                      %option 1
-                      %option 2
-                      %option 3
-                      %option 4
-                      %option 5
+                  = @project.start
                 .form-group
-                  .col-lg-10.col-lg-offset-2
-                    %button.btn.btn-default{:type => "reset"} Cancel
-                    %button.btn.btn-primary{:type => "submit"} Submit
+                  = f.label :finish, '終了時期（予定）'
+                .form-group
+                  = @project.finish
+                .form-group
+                  = f.label :status, 'ステータス'
+                .form-group#select
+                  = Settings.status[@project.status]
+                .form-group
+                  = f.submit class: 'btn btn-primary submit'
