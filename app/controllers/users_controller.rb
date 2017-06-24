@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @kanto_users = User.where(location: 'kanto')
@@ -18,7 +18,13 @@ class UsersController < ApplicationController
   def update
     @user.update(user_params)
     if @user.save
-      redirect_to user_path(@user.id), notice: 'ユーザー情報が更新されました。'
+      redirect_to user_path(@user.id), notice: 'メンバー情報が更新されました。'
+    end
+  end
+
+  def destroy
+    if @user.destroy
+      redirect_to root_path, notice: 'メンバーが削除されました。'
     end
   end
 
