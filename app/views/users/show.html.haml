@@ -5,7 +5,8 @@
         .row
           .col-lg-6
             %h2.line= @user.name + '（詳細）'
-            = link_to @user.name + ' のページを編集', edit_user_path(@user.id), class: 'btn btn-primary edit'
+            = link_to '編集', edit_user_path(@user.id), class: 'btn btn-primary action'
+            = link_to '削除', user_path(@user), method: :delete, class: 'btn btn-danger action'
 .container
   .row
     .col-lg-6
