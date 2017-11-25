@@ -16,8 +16,7 @@
                 %li
                   %a.btn.wide.btn-success{"data-toggle" => "tab", :href => "#kyushu"} 九州
                 %li
-                  = link_to 'CSV出力', csv_output_users_path(format: :csv), id: 'alert', class: 'btn wide btn-primary'
-                  -# , :onclick => 'alert("メンバー情報のCSVを出力しますか？")'
+                  = link_to 'CSV出力', csv_output_users_path(format: :csv), id: 'alert', class: 'btn wide btn-primary', data: { confirm: "全メンバーのCSVが出力されます。本当に良いですか？" }
   .tab-content
     #all.tab-pane.fade.active.in
       %h4.admin-label 関東
