@@ -1,0 +1,22 @@
+%tbody
+  %tr.info
+    %td.column 名前
+    %td= user.name
+  %tr
+    %td.column メールアドレス
+    %td= user.email
+  %tr.info
+    %td.column 大学
+    %td= user.university
+  %tr
+    %td.column 学部
+    %td= user.faculty
+  %tr.info
+    %td.column 学科
+    %td= user.department
+  %tr
+    %td.column 学年
+    %td= Settings.year[user.year]
+  %tr.info
+    %td.column 出身地
+    %td= user.birthplace

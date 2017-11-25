@@ -1,0 +1,28 @@
+%tbody
+  %tr.warning
+    %td.column 活動拠点
+    %td= Settings.location_name[user.location]
+  %tr
+    %td.column 専門班
+    %td= Settings.edupedia_team[user.team_main]
+  %tr.warning
+    %td.column 専門班(兼任)
+    %td= Settings.edupedia_team[user.team_sub]
+  %tr
+    %td.column 役職
+    %td= Settings.position_name[user.position]
+  %tr.warning
+    %td.column 現在やっていること
+    %td= user.doing
+  %tr
+    %td.column 今後やりたいこと
+    %td= user.future_doing
+  %tr.warning
+    %td.column EDUPEDIA開始時期
+    %td= user.start_time
+  %tr
+    %td.column EDUPEDIA退会時期
+    %td= user.finish_time
+  %tr.warning
+    %td.column EDUPEDIAに入ったきっかけ
+    %td= user.trigger

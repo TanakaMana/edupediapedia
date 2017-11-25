@@ -15,53 +15,14 @@
           .panel-heading
             %h3.panel-title 基本情報
         %table.table.table-striped.table-hover
-          %tbody
-            %tr.info
-              %td.column 名前
-              %td= @user.name
-            %tr
-              %td.column メールアドレス
-              %td= @user.email
-            %tr.info
-              %td.column 大学
-              %td= @user.university
-            %tr
-              %td.column 学部
-              %td= @user.faculty
-            %tr.info
-              %td.column 学科
-              %td= @user.department
-            %tr
-              %td.column 学年
-              %td= Settings.year[@user.year]
-            %tr.info
-              %td.column 出身地
-              %td= @user.birthplace
+          = render partial: "basic_info", locals: { user: @user }
     .col-lg-6
       .bs-component
         .panel.panel-danger
           .panel-heading
             %h3.panel-title 人柄
         %table.table.table-striped.table-hover
-          %tbody
-            %tr.danger
-              %td.column 興味のある教育分野
-              %td= @user.education_interest
-            %tr
-              %td.column 将来やりたい仕事
-              %td= @user.future_work
-            %tr.danger
-              %td.column 得意なこと
-              %td= @user.specially
-            %tr
-              %td.column 今後伸ばしたい力
-              %td= @user.improve
-            %tr.danger
-              %td.column 趣味
-              %td= @user.hobby
-            %tr.danger
-              %td.column 座右の銘
-              %td= @user.motto
+          = render partial: "personality", locals: { user: @user }
   .row
     .col-lg-6
       .bs-component
@@ -69,47 +30,14 @@
           .panel-heading
             %h3.panel-title EDUPEDIAの活動
         %table.table.table-striped.table-hover
-          %tbody
-            %tr.warning
-              %td.column 活動拠点
-              %td= Settings.location_name[@user.location]
-            %tr
-              %td.column 専門班
-              %td= Settings.edupedia_team[@user.team_main]
-            %tr.warning
-              %td.column 専門班(兼任)
-              %td= Settings.edupedia_team[@user.team_sub]
-            %tr
-              %td.column 役職
-              %td= Settings.position_name[@user.position]
-            %tr.warning
-              %td.column 現在やっていること
-              %td= @user.doing
-            %tr
-              %td.column 今後やりたいこと
-              %td= @user.future_doing
-            %tr.warning
-              %td.column EDUPEDIA開始時期
-              %td= @user.start_time
-            %tr
-              %td.column EDUPEDIA退会時期
-              %td= @user.finish_time
-            %tr.warning
-              %td.column EDUPEDIAに入ったきっかけ
-              %td= @user.trigger
+          = render partial: "internal_activity", locals: { user: @user }
     .col-lg-6
       .bs-component
         .panel.panel-success
           .panel-heading
             %h3.panel-title EDUPEDIA外の活動
         %table.table.table-striped.table-hover
-          %tbody
-            %tr.success
-              %td.column その他のROJE所属プロジェクト・課
-              %td= Settings.roje_project[@user.roje]
-            %tr
-              %td.column ROJE外の活動
-              %td= @user.outside
+          = render partial: "external_activity", locals: { user: @user }
     .col-lg-6
       .bs-component
         .panel.panel-active
